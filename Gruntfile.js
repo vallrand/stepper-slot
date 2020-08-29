@@ -21,9 +21,6 @@ module.exports = function(grunt){
             }
         },
         watch: {
-            options: {
-                nospawn: false
-            },
             files: ['src/**/*'],
             tasks: ['browserify:development']
         }

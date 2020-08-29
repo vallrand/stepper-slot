@@ -1,5 +1,5 @@
 import { AmbientLight, DirectionalLight, BoxGeometry, MeshStandardMaterial, Mesh } from 'three'
-import { Application } from './Application'
+import { Application } from './common'
 
 export class MainView {
     constructor(private readonly app: Application){
