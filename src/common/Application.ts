@@ -40,4 +40,10 @@ export class Application {
             throw new Error(`Texture "${key}" not found.`)
         return this.textures[key]
     }
+    public generateCubeMap(key: string, texture: Texture): WebGLCubeRenderTarget {
+        const cubeMapTexture = new WebGLCubeRenderTarget(texture.image.height)
+        cubeMapTexture.fromEquirectangularTexture(this.renderer, texture)
+        this.textures[key] = cubeMapTexture as any
+        return cubeMapTexture
+    }
 }
